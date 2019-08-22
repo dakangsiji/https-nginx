@@ -17,7 +17,7 @@ RUN mkdir -p /usr/local/src && \
 RUN mkdir -p /src/ && \
     cd /src/ && \
     git clone https://gitee.com/openeuler/website && \
-    git clone -b stable https://gitee.com/openeuler/docs && \
+    git clone https://gitee.com/openeuler/docs && \
     rm -rf /src/website/content/docs/ && \
     rm -rf /src/website/content/menu/ && \
     mkdir -p /src/website/content/docs/ && \
