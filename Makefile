@@ -13,5 +13,5 @@ docker:
 	docker build --pull -t $(PREFIX):$(TAG) .
 
 clean:
-	rm $(KEY)
-	rm $(CERT)
+	rm -rf $(KEY)
+	rm -rf $(CERT)
