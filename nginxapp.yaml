@@ -35,8 +35,8 @@ spec:
         configMap:
           name: openeulersvcconfigmap
       containers:
-      - name: nginxhttps
-        image: ymqytw/nginxhttps:1.5
+      - name: website
+        image: openeuler/website:1.0
         command: ["/home/auto-reload-nginx.sh"]
         ports:
         - containerPort: 443
