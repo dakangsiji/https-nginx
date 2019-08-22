@@ -3,10 +3,10 @@
 ### Generate certificates
 
 ```
-make keys KEY=/tmp/openeulersvc.key CERT=/tmp/openeulersvc.crt
+make key KEY=/tmp/openeulersvc.key CERT=/tmp/openeulersvc.crt
 ```
 ```
-make keys
+make key
 ```
 
 ### Create a secret and a configmap
