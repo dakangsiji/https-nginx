@@ -15,14 +15,14 @@
 all:
 
 TAG = 1.0
-PREFIX = bprashanth/nginxhttps
-KEY = /tmp/nginx.key
-CERT = /tmp/nginx.crt
+PREFIX = openeuler/website
+KEY = /tmp/openeulersvc.key
+CERT = /tmp/openeulersvc.crt
 SECRET = /tmp/secret.json
 
 keys:
 	# The CName used here is specific to the service specified in nginx-app.yaml.
-	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $(KEY) -out $(CERT) -subj "/CN=nginxsvc/O=nginxsvc"
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $(KEY) -out $(CERT) -subj "/CN=openeulersvc/O=openeulersvc"
 
 container:
 	docker build --pull -t $(PREFIX):$(TAG) .
