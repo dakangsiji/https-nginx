@@ -15,6 +15,12 @@ make key KEY=/tmp/openeulersvc.key CERT=/tmp/openeulersvc.crt
 kubectl create secret tls openeulersvcsecret --key /tmp/openeulersvc.key --cert /tmp/openeulersvc.crt
 ```
 ```
+kubectl create secret generic openeulersvcsecret \
+--from-file=fullchain.pem \
+--from-file=privkey.pem \
+--from-file=chain.pem
+```
+```
 kubectl create configmap openeulersvcconfigmap --from-file=default.conf
 ```
 
