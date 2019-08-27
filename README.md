@@ -18,10 +18,11 @@ kubectl create secret tls openeulersvcsecret --key /tmp/openeulersvc.key --cert 
 kubectl create secret generic openeulersvcsecret \
 --from-file=fullchain.pem \
 --from-file=privkey.pem \
---from-file=chain.pem
+--from-file=chain.pem \
+-n euler
 ```
 ```
-kubectl create configmap openeulersvcconfigmap --from-file=default.conf
+kubectl create configmap openeulersvcconfigmap --from-file=default.conf -n euler
 ```
 
 ### Create a service and a replication controller
