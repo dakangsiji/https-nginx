@@ -7,7 +7,7 @@ wget https://dl.eff.org/certbot-auto
 
 chmod u+x certbot-auto
 
-./certbot-auto certonly -d *.openeuler.org --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory
+./certbot-auto certonly -d *.openeuler.org -d openeuler.org --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory
 
 ```
 
