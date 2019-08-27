@@ -12,9 +12,7 @@ chmod u+x certbot-auto
 ```
 
 ### Create a secret and a configmap
-```
-kubectl create secret tls openeulersvcsecret --key /tmp/openeulersvc.key --cert /tmp/openeulersvc.crt
-```
+
 ```
 kubectl create secret generic openeulersvcsecret \
 --from-file=fullchain.pem \
