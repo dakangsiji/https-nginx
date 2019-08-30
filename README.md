@@ -18,8 +18,8 @@ kubectl create secret generic websitesvcsecret \
 --from-file=fullchain.pem \
 --from-file=privkey.pem \
 --from-file=chain.pem \
--n euler
+-n website
 ```
 ```
-kubectl create configmap websitesvcconfigmap --from-file=default.conf -n euler
+kubectl create configmap websitesvcconfigmap --from-file=default.conf -n website
 ```
