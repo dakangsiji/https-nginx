@@ -14,12 +14,12 @@ chmod u+x certbot-auto
 ### Create a secret and a configmap
 
 ```
-kubectl create secret generic openeulersvcsecret \
+kubectl create secret generic websitesvcsecret \
 --from-file=fullchain.pem \
 --from-file=privkey.pem \
 --from-file=chain.pem \
 -n euler
 ```
 ```
-kubectl create configmap openeulersvcconfigmap --from-file=default.conf -n euler
+kubectl create configmap websitesvcconfigmap --from-file=default.conf -n euler
 ```
