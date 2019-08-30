@@ -24,8 +24,10 @@ kubectl create secret generic websitesvcsecret \
 kubectl create configmap websitesvcconfigmap --from-file=default.conf -n website
 ```
 
-kubectl create secret generic mailsvcsecret \
+```
+kubectl create secret generic mailcertsecret \
 --from-file=fullchain.pem \
 --from-file=privkey.pem \
 --from-file=chain.pem \
 -n mail
+```
